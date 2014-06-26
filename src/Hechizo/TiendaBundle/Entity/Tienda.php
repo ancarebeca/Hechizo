@@ -38,7 +38,7 @@ class Tienda{
 	/** @ORM\Column(type="text") */
 	protected $direccion;
 	
-	/** @ORM\ManyToOne(targetEntity="Cupon\CiudadBundle\Entity\Ciudad") */
+	/** @ORM\ManyToOne(targetEntity="Hechizo\CiudadBundle\Entity\Ciudad") */
 	protected $ciudad; // Muchas tiendas pueden estar asociadas con una ciudad, pero una tienda sólo puede estar asociada con una ciudad
 
     /**

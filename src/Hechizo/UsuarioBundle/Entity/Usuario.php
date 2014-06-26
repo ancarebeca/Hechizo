@@ -99,7 +99,7 @@ class Usuario
 	/**
 	 * @var integer $ciudad
 	 *
-	 * @ORM\ManyToOne(targetEntity="Cupon\CiudadBundle\Entity\Ciudad")
+	 * @ORM\ManyToOne(targetEntity="Hechizo\CiudadBundle\Entity\Ciudad")
 	 */
 	private $ciudad;
 

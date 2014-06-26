@@ -2,13 +2,12 @@
 namespace Hechizo\CiudadBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
-/*
+/**
  * @ORM\Entity
- * @ORM\Table(name="ciudad")
  */
 class Ciudad {
 	
-	/*
+	/**
 	 * @ORM\Id 
 	 * @ORM\Column(type="integer") 
 	 * @ORM\GeneratedValue

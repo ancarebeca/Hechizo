@@ -4,7 +4,7 @@ namespace Hechizo\OfertaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Oferta\OfertaBundle\Entity\OfertaRepository")
+ * @ORM\Entity
  */
 class Oferta
 {
@@ -85,12 +85,12 @@ class Oferta
 	protected $revisada;
 
 	/**
-	 * @ORM\ManyToOne(targetEntity="Cupon\CiudadBundle\Entity\Ciudad")
+	 * @ORM\ManyToOne(targetEntity="Hechizo\CiudadBundle\Entity\Ciudad")
 	 */
 	protected $ciudad;
 
 	/**
-	 * @ORM\ManyToOne(targetEntity="Cupon\TiendaBundle\Entity\Tienda")
+	 * @ORM\ManyToOne(targetEntity="Hechizo\TiendaBundle\Entity\Tienda")
 	 */
 	protected $tienda;
 
