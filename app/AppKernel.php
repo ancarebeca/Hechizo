@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Hechizo\CiudadBundle\CiudadBundle(),
             new Hechizo\TiendaBundle\TiendaBundle(),
             new Hechizo\UsuarioBundle\UsuarioBundle(),
+        	new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
