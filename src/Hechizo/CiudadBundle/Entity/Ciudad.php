@@ -1,6 +1,7 @@
 <?php
 namespace Hechizo\CiudadBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Hechizo\OfertaBundle\Util\Util;
 
 /**
  * @ORM\Entity
@@ -14,15 +15,16 @@ class Ciudad {
 	 */
 	protected $id;
 	
-	/*
-	 * @ORM\Column(type="integer")
+	/**
+	 *  @ORM\Column(type="string", length=100)
 	 */
-	
 	protected $nombre;
-	/*
-	 * @ORM\Column(type="integer")
+	
+	/**
+	 * @ORM\Column(type="string", length=100)
 	 */
 	protected $slug;
+	
 	
 	public function getId()
 	{
@@ -32,6 +34,7 @@ class Ciudad {
 	public function setNombre($nombre)
 	{
 		$this->nombre = $nombre;
+		$this->slug = Util::getSlug($nombre);
 	}
 	
 	public function getNombre()

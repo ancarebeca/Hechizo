@@ -2,6 +2,7 @@
 namespace Hechizo\TiendaBundle\Entity;
 
 Use Doctrine\ORM\Mapping as ORM;
+use Hechizo\OfertaBundle\Util\Util;
 
 /**
  *  @ORM\Entity 
@@ -60,6 +61,7 @@ class Tienda{
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        $this->slug = Util::getSlug($nombre);
 
         return $this;
     }
