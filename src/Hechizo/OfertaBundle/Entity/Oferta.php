@@ -389,10 +389,10 @@ class Oferta
     /**
      * Set ciudad
      *
-     * @param \Cupon\CiudadBundle\Entity\Ciudad $ciudad
+     * @param \Hechizo\CiudadBundle\Entity\Ciudad $ciudad
      * @return Oferta
      */
-    public function setCiudad(\Cupon\CiudadBundle\Entity\Ciudad $ciudad = null)
+    public function setCiudad(\Hechizo\CiudadBundle\Entity\Ciudad $ciudad = null)
     {
         $this->ciudad = $ciudad;
 
@@ -402,7 +402,7 @@ class Oferta
     /**
      * Get ciudad
      *
-     * @return \Cupon\CiudadBundle\Entity\Ciudad 
+     * @return \Hechizo\CiudadBundle\Entity\Ciudad 
      */
     public function getCiudad()
     {
@@ -412,10 +412,10 @@ class Oferta
     /**
      * Set tienda
      *
-     * @param \Cupon\TiendaBundle\Entity\Tienda $tienda
+     * @param \Hechizo\TiendaBundle\Entity\Tienda $tienda
      * @return Oferta
      */
-    public function setTienda(\Cupon\TiendaBundle\Entity\Tienda $tienda = null)
+    public function setTienda(\Hechizo\TiendaBundle\Entity\Tienda $tienda = null)
     {
         $this->tienda = $tienda;
 
@@ -425,7 +425,7 @@ class Oferta
     /**
      * Get tienda
      *
-     * @return \Cupon\TiendaBundle\Entity\Tienda 
+     * @return \Hechizo\TiendaBundle\Entity\Tienda 
      */
     public function getTienda()
     {

@@ -1,21 +1,20 @@
 <?php
 namespace Hechizo\UsuarioBundle\Entity;
-
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
- *  @ORM\Entity 
+ *  @ORM\Entity
  *  @ORM\Table(name="usuario")
  ***/
 
 class Usuario
 {
 	/**
-	 * @var integer $id
-	 *
 	 * @ORM\Column(name="id", type="integer")
 	 * @ORM\Id
-	 * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="AUTO")
 	 */
 	private $id;
 
@@ -376,10 +375,10 @@ class Usuario
     /**
      * Set ciudad
      *
-     * @param \Cupon\CiudadBundle\Entity\Ciudad $ciudad
+     * @param Hechizo\CiudadBundle\Entity\Ciudad $ciudad
      * @return Usuario
      */
-    public function setCiudad(\Cupon\CiudadBundle\Entity\Ciudad $ciudad = null)
+    public function setCiudad(\Hechizo\CiudadBundle\Entity\Ciudad $ciudad = null)
     {
         $this->ciudad = $ciudad;
 
@@ -389,7 +388,7 @@ class Usuario
     /**
      * Get ciudad
      *
-     * @return \Cupon\CiudadBundle\Entity\Ciudad 
+     * @return Hechizo\CiudadBundle\Entity\Ciudad
      */
     public function getCiudad()
     {

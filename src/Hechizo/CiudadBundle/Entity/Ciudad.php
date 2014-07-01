@@ -10,8 +10,8 @@ class Ciudad {
 	
 	/**
 	 * @ORM\Id 
-	 * @ORM\Column(type="integer") 
-	 * @ORM\GeneratedValue
+	 * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
 	 */
 	protected $id;
 	

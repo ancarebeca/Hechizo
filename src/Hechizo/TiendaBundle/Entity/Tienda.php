@@ -1,6 +1,7 @@
 <?php
 namespace Hechizo\TiendaBundle\Entity;
 
+use Symfony\Component\Security\Core\User\UserInterface;
 Use Doctrine\ORM\Mapping as ORM;
 use Hechizo\OfertaBundle\Util\Util;
 
@@ -14,7 +15,7 @@ class Tienda{
 	/**
 	 * @ORM\Id
 	 * @ORM\Column(type="integer")
-	 * @ORM\GeneratedValue
+     * @ORM\GeneratedValue(strategy="AUTO")
 	 */
 	protected $id;
 	
@@ -217,10 +218,10 @@ class Tienda{
     /**
      * Set ciudad
      *
-     * @param \Cupon\CiudadBundle\Entity\Ciudad $ciudad
+     * @param \Hechizo\CiudadBundle\Entity\Ciudad $ciudad
      * @return Tienda
      */
-    public function setCiudad(\Cupon\CiudadBundle\Entity\Ciudad $ciudad = null)
+    public function setCiudad(\Hechizo\CiudadBundle\Entity\Ciudad $ciudad = null)
     {
         $this->ciudad = $ciudad;
 
@@ -230,7 +231,7 @@ class Tienda{
     /**
      * Get ciudad
      *
-     * @return \Cupon\CiudadBundle\Entity\Ciudad 
+     * @return \Hechizo\CiudadBundle\Entity\Ciudad 
      */
     public function getCiudad()
     {
