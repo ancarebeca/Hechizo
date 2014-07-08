@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Hechizo\OfertaBundle\Util\Util;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Hechizo\OfertaBundle\Repository\OfertaRepository")
  */
 class Oferta
 {

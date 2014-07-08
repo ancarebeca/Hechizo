@@ -2,10 +2,7 @@ _paginas_estaticas:
     resource: routing_paginas.yml
     prefix: /pagina
     defaults: { _controller: FrameworkBundle:Template:template }
-portada:
-    path: /
-    defaults: {_controller:OfertaBundle:default:portada}
-    
+        
 usuario:
     resource: "@UsuarioBundle/Resources/config/routing.yml"
     prefix:   /
@@ -22,3 +19,12 @@ oferta:
     resource: "@OfertaBundle/Resources/config/routing.yml"
     prefix:   /
 
+# Ruta completa de la portada (con el slug de la ciudad)
+portada:
+    path: /{ciudad}
+    defaults:  { _controller: OfertaBundle:Default:portada, ciudad: %hechizo.ciudad_por_defecto% }
+
+# Ruta simple de la portada
+_portada:
+    path: /
+    defaults: { _controller: FrameworkBundle:Redirect:redirect, route: portada, ciudad: '%hechizo.ciudad_por_defecto%' }
