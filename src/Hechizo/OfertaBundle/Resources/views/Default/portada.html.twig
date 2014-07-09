@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Portada | Cupon</title>
-</head>
+{% extends '::frontend.html.twig' %}
 
-<body id="portada"><div id="contenedor">
-    <header>
-        <h1><a href="{{ path('portada') }}">CUPON</a></h1>
-        <nav>
-            <ul>
-                <li><a href="{{ path('portada') }}">Oferta del día</a></li>
-                <li><a href="#">Ofertas recientes</a></li>
-                <li><a href="#">Mis ofertas</a></li>
-            </ul>
-        </nav>
-    </header>
-    <article class="oferta">
+{% block title %}Cupon, cada día ofertas increíbles en tu ciudad con descuentos de hasta el 90%{% endblock %}
+
+{% block id 'portada' %}
+
+{% block article %}
         <section class="descripcion">
             <h1><a href="#"> {{ oferta.nombre }} </a></h1>
             {{ oferta.descripcion }}
@@ -59,20 +47,12 @@
             <h2>Sobre la tienda</h2>
             {{ oferta.tienda.descripcion }}
         </section>
-    </article>
-    <aside>
+    {% endblock %}
+
+    {% block aside %}
         ## FORMULARIO DE LOGIN ##
         <section id="nosotros">
             <h2>Sobre nosotros</h2>
             <p>Lorem ipsum dolor sit amet...</p>
         </section>
-    </aside>
-    <footer>
-        &copy; {{ 'now' | date('Y') }}- Cupon
-        <a href="{{ path ('pagina_ayuda') }}">Ayuda</a>
-        <a href="{{ path ('pagina_contacto') }}">Contacto</a>
-        <a href="{{ path ('pagina_privacidad') }}">Privacidad</a>
-        <a href="{{ path ('pagina_sobre_nosotros') }}">Sobre nosotros</a>
-    </footer>
-</div></body>
-</html>
+   {% endblock %}
