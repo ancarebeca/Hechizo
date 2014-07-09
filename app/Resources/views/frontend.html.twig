@@ -1,34 +1,28 @@
-<!DOCTYPE html>
-<html>
+{% extends '::base.html.twig' %}
 
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- <title>{% block title %}{% endblock %} | Cupon</title>
-</head>
+{% block stylesheets %}{% endblock %}
 
-<body id="{% block id '' %}"><div id="contenedor"
- <header>
-  <h1><a href="{{ path('portada') }}">CUPON</a></h1>
-  <nav>
-   <ul>
-    <li><a href="{{ path('portada') }}">Oferta del día</a></li>
-    <li><a href="#">Ofertas recientes</a></li>
-    <li><a href="#">Mis ofertas</a></li>
-   </ul>
-  </nav>
- </header>
- <article>
-    {% block article %}{% endblock %}
- </article>
- <aside>
-  	{% block aside %}{% endblock %}
- </aside>
- <footer>
-  &copy; {{ 'now' | date('Y') }} - Cupon
-        <a href="{{ path ('pagina_ayuda') }}">Ayuda</a>
-        <a href="{{ path ('pagina_contacto') }}">Contacto</a>
-        <a href="{{ path ('pagina_privacidad') }}">Privacidad</a>
-        <a href="{{ path ('pagina_sobre_nosotros') }}">Sobre nosotros</a>
- </footer>
-</div></body>
-</html>
+{% block javascripts %}{% endblock %}
+
+{% block body %}
+<header>
+    {% set ciudadSeleccionada = app.request.attributes.has('ciudad')
+	   ? app.request.attributes.get('ciudad')
+	   : ciudad_por_defecto %}	
+    <h1><a href="{{ path('portada', { 'ciudad': ciudadSeleccionada })}}">CUPON</a></h1>
+	<nav>
+	<ul>
+	<li><a href="{{ path('portada') }}">Oferta del día</a></li>
+	<li><a href="#">Ofertas recientes</a></li>
+	<li><a href="#">Mis ofertas</a></li>
+	</ul>
+	</nav>
+</header>
+<article>
+{% block article %}{% endblock %}
+</article>
+<aside>
+{% block aside %}{% endblock %}
+</aside>
+{% endblock %}
+
