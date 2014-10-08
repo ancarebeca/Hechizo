@@ -18,7 +18,7 @@ If you want try the Task Manager  should be the following step:
 git@github.com:ancarebeca/Hechizo.git
 ```
 
-2) Install vendors: 
+2) Install to vendors: 
 ```
 composer install
 ```
