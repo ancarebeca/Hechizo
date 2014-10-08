@@ -9,7 +9,7 @@ following Javier Eigluz's book ('Desarrollo Web Ágil con Symfony2 ').
 
 Currently this project is in a development stage. For that reason the styles and more feature will be added soon.
 
-How install:
+How to install:
 =======
 If you want try the Task Manager  should be the following step: 
 
@@ -18,7 +18,7 @@ If you want try the Task Manager  should be the following step:
 git@github.com:ancarebeca/Hechizo.git
 ```
 
-2) Install to vendors: 
+2) Install vendors: 
 ```
 composer install
 ```
